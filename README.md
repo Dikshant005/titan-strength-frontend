@@ -18,7 +18,7 @@ TitanStrength is a comprehensive, full-stack gym management platform designed to
 ### Installation & Setup
 1. **Clone the repository**
    ```bash
-   git clone [https://github.com/your-username/TitanStrength.git](https://github.com/your-username/TitanStrength.git)
+   git clone https://github.com/Dikshant005/titan-strength-frontend.git
    ```
 2. **Navigate to the project directory**
    ```bash
@@ -27,8 +27,6 @@ TitanStrength is a comprehensive, full-stack gym management platform designed to
 3. **Install Dependencies**
    ```bash
    npm install
-   # or
-   yarn install
    ```
 4. **Configure Environment Variables**
    Create a `.env` file in the root directory. Ensure your backend API URLs are set up to be consumed by the dynamic string templates in the services layer:
@@ -38,7 +36,5 @@ TitanStrength is a comprehensive, full-stack gym management platform designed to
 5. **Start the Development Server**
    ```bash
    npm start
-   # or
-   yarn start
    ```
 
