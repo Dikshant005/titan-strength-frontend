@@ -28,12 +28,7 @@ TitanStrength is a comprehensive, full-stack gym management platform designed to
    ```bash
    npm install
    ```
-4. **Configure Environment Variables**
-   Create a `.env` file in the root directory. Ensure your backend API URLs are set up to be consumed by the dynamic string templates in the services layer:
-   ```env
-   REACT_APP_API_BASE_URL=backend_api_url
-   ```
-5. **Start the Development Server**
+4. **Start the Development Server**
    ```bash
    npm start
    ```

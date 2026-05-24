@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from 'react';
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-    const backendUrl = 'https://titan-strength.me';
+    const backendUrl = 'https://titan-strength.onrender.com';
     const apiBase = `${backendUrl}/api/v1/auth`;
 
     const [user, setUser] = useState(() => {
