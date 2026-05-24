@@ -23,7 +23,7 @@ const ManagerSubscriptions = () => {
     const fetchData = async () => {
         try {
             setLoading(true);
-            const res = await fetch('https://titan-strength.me/api/v1/subscriptions', {
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/subscriptions', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await res.json();
@@ -37,7 +37,7 @@ const ManagerSubscriptions = () => {
 
     const fetchPlans = async () => {
         try {
-            const res = await fetch('https://titan-strength.me/api/v1/plans', {
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/plans', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await res.json();
@@ -50,7 +50,7 @@ const ManagerSubscriptions = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch('https://titan-strength.me/api/v1/subscriptions', {
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/subscriptions', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

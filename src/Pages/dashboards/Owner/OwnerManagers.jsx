@@ -21,7 +21,7 @@ const OwnerManagers = () => {
     const fetchManagers = async () => {
         try {
             setLoading(true);
-            const response = await fetch('https://titan-strength.me/api/v1/manager/managers', {
+            const response = await fetch('https://titan-strength.onrender.com/api/v1/manager/managers', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await response.json();

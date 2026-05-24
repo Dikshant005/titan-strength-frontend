@@ -24,7 +24,7 @@ const OwnerUserManagement = () => {
     const fetchAllUsers = async () => {
         try {
             setLoading(true);
-            const response = await fetch('https://titan-strength.me/api/v1/users', {
+            const response = await fetch('https://titan-strength.onrender.com/api/v1/users', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await response.json();
@@ -41,7 +41,7 @@ const OwnerUserManagement = () => {
 
     const fetchUserDetails = async (id) => {
         try {
-            const response = await fetch(`https://titan-strength.me/api/v1/users/${id}`, {
+            const response = await fetch(`https://titan-strength.onrender.com/api/v1/users/${id}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await response.json();

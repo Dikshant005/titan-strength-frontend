@@ -32,7 +32,7 @@ const OwnerBranches = () => {
         try {
             setLoading(true);
             const timestamp = new Date().getTime();
-            const response = await fetch(`https://titan-strength.me/api/v1/branches?t=${timestamp}`, {
+            const response = await fetch(`https://titan-strength.onrender.com/api/v1/branches?t=${timestamp}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await response.json();
@@ -46,7 +46,7 @@ const OwnerBranches = () => {
 
     const fetchManagers = async () => {
         try {
-            const response = await fetch(`https://titan-strength.me/api/v1/owner/managers`, {
+            const response = await fetch(`https://titan-strength.onrender.com/api/v1/owner/managers`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await response.json();
@@ -58,7 +58,7 @@ const OwnerBranches = () => {
 
     const fetchBranchDetails = async (id) => {
         try {
-            const response = await fetch(`https://titan-strength.me/api/v1/branches/${id}`, {
+            const response = await fetch(`https://titan-strength.onrender.com/api/v1/branches/${id}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await response.json();
@@ -115,8 +115,8 @@ const OwnerBranches = () => {
         e.preventDefault();
         try {
             const url = isEditMode
-                ? `https://titan-strength.me/api/v1/branches/${currentId}`
-                : `https://titan-strength.me/api/v1/branches`;
+                ? `https://titan-strength.onrender.com/api/v1/branches/${currentId}`
+                : `https://titan-strength.onrender.com/api/v1/branches`;
             const method = isEditMode ? 'PUT' : 'POST';
 
             const response = await fetch(url, {
@@ -147,7 +147,7 @@ const OwnerBranches = () => {
     const confirmDelete = async () => {
         if (!itemToDelete) return;
         try {
-            const response = await fetch(`https://titan-strength.me/api/v1/branches/${itemToDelete}`, {
+            const response = await fetch(`https://titan-strength.onrender.com/api/v1/branches/${itemToDelete}`, {
                 method: 'DELETE',
                 headers: { Authorization: `Bearer ${token}` }
             });

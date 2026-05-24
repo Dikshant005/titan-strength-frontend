@@ -11,7 +11,7 @@ const LandingPage = () => {
     useEffect(() => {
         const fetchPlans = async () => {
             try {
-                const response = await fetch('https://titan-strength.me/api/v1/plans');
+                const response = await fetch('https://titan-strength.onrender.com/api/v1/plans');
                 const data = await response.json();
                 if (data.success) {
                     setPlans(data.data);

@@ -14,7 +14,7 @@ const ManagerDailyOps = () => {
     const fetchLiveAttendance = async () => {
         const token = getAuthToken();
         try {
-            const response = await fetch('https://titan-strength.me/api/v1/manager/attendance/live', {
+            const response = await fetch('https://titan-strength.onrender.com/api/v1/manager/attendance/live', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await response.json();
@@ -35,7 +35,7 @@ const ManagerDailyOps = () => {
         const token = getAuthToken();
         setLoading(true);
         try {
-            const response = await fetch('https://titan-strength.me/api/v1/manager/check-in', {
+            const response = await fetch('https://titan-strength.onrender.com/api/v1/manager/check-in', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ const ManagerDailyOps = () => {
     const handleCheckOut = async (userId) => {
         const token = getAuthToken();
         try {
-            const response = await fetch('https://titan-strength.me/api/v1/manager/check-out', {
+            const response = await fetch('https://titan-strength.onrender.com/api/v1/manager/check-out', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

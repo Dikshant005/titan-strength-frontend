@@ -16,7 +16,7 @@ const TrainerDashboard = () => {
                 const token = JSON.parse(localStorage.getItem('titanUser'))?.token;
                 const headers = { Authorization: `Bearer ${token}` };
 
-                const res = await fetch('https://titan-strength.me/api/v1/content/videos', { headers });
+                const res = await fetch('https://titan-strength.onrender.com/api/v1/content/videos', { headers });
                 const data = await res.json();
 
                 if (data.success) setVideos(data.data);

@@ -26,7 +26,7 @@ const Navbar = () => {
             if (!userData) return;
             try {
                 const token = JSON.parse(localStorage.getItem('titanUser'))?.token;
-                const res = await fetch('https://titan-strength.me/api/v1/users/avatar', {
+                const res = await fetch('https://titan-strength.onrender.com/api/v1/users/avatar', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 const data = await res.json();

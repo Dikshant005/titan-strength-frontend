@@ -16,8 +16,8 @@ const UserDashboard = () => {
         const fetchData = async () => {
             try {
                 const [branchesRes, plansRes] = await Promise.all([
-                    fetch('https://titan-strength.me/api/v1/branches'),
-                    fetch('https://titan-strength.me/api/v1/plans')
+                    fetch('https://titan-strength.onrender.com/api/v1/branches'),
+                    fetch('https://titan-strength.onrender.com/api/v1/plans')
                 ]);
 
                 const branchesData = await branchesRes.json();

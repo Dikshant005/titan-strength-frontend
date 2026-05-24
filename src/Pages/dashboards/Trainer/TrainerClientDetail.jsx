@@ -22,7 +22,7 @@ const TrainerClientDetail = ({ videos = [] }) => {
     useEffect(() => {
         const fetchClients = async () => {
             try {
-                const res = await fetch('https://titan-strength.me/api/v1/trainers/clients', {
+                const res = await fetch('https://titan-strength.onrender.com/api/v1/trainers/clients', {
                     headers: { Authorization: `Bearer ${getToken()}` }
                 });
                 const result = await res.json();
@@ -47,8 +47,8 @@ const TrainerClientDetail = ({ videos = [] }) => {
 
         try {
             const [profileRes, progressRes] = await Promise.all([
-                fetch(`https://titan-strength.me/api/v1/trainers/clients/${clientId}`, { headers: { Authorization: `Bearer ${token}` } }),
-                fetch(`https://titan-strength.me/api/v1/trainers/clients/${clientId}/progress`, { headers: { Authorization: `Bearer ${token}` } })
+                fetch(`https://titan-strength.onrender.com/api/v1/trainers/clients/${clientId}`, { headers: { Authorization: `Bearer ${token}` } }),
+                fetch(`https://titan-strength.onrender.com/api/v1/trainers/clients/${clientId}/progress`, { headers: { Authorization: `Bearer ${token}` } })
             ]);
 
             const pData = await profileRes.json();
@@ -74,7 +74,7 @@ const TrainerClientDetail = ({ videos = [] }) => {
     const handleAddProgress = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch(`https://titan-strength.me/api/v1/trainers/clients/${selectedClientId}/progress`, {
+            const res = await fetch(`https://titan-strength.onrender.com/api/v1/trainers/clients/${selectedClientId}/progress`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${getToken()}` },
                 body: JSON.stringify(progressForm)
@@ -100,7 +100,7 @@ const TrainerClientDetail = ({ videos = [] }) => {
         }
 
         try {
-            const res = await fetch(`https://titan-strength.me/api/v1/trainers/clients/${selectedClientId}/assign-diet`, {
+            const res = await fetch(`https://titan-strength.onrender.com/api/v1/trainers/clients/${selectedClientId}/assign-diet`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${getToken()}` },
                 body: JSON.stringify(dietForm)
@@ -121,7 +121,7 @@ const TrainerClientDetail = ({ videos = [] }) => {
         }
 
         try {
-            const res = await fetch(`https://titan-strength.me/api/v1/trainers/clients/${selectedClientId}/assign-workout`, {
+            const res = await fetch(`https://titan-strength.onrender.com/api/v1/trainers/clients/${selectedClientId}/assign-workout`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${getToken()}` },
                 body: JSON.stringify(workoutForm)

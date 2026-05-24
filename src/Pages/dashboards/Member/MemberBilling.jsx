@@ -11,7 +11,7 @@ const MemberBilling = () => {
             if (!token) return;
 
             try {
-                const res = await fetch('https://titan-strength.me/api/v1/members/payment-history', {
+                const res = await fetch('https://titan-strength.onrender.com/api/v1/members/payment-history', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 const data = await res.json();

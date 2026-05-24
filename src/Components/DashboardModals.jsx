@@ -132,7 +132,7 @@ function DashboardModals({ type, onClose, user }) {
             setUploading(true);
             const token = JSON.parse(localStorage.getItem('titanUser'))?.token;
 
-            const res = await fetch('https://titan-strength.me/api/v1/users/avatar', {
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/users/avatar', {
                 method: 'PUT',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -172,7 +172,7 @@ function DashboardModals({ type, onClose, user }) {
             setUploading(true);
             const token = JSON.parse(localStorage.getItem('titanUser'))?.token;
 
-            const res = await fetch('https://titan-strength.me/api/v1/users/avatar', {
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/users/avatar', {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`

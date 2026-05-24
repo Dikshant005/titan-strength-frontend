@@ -53,10 +53,10 @@ const OwnerStatsRevenue = () => {
                 const timestamp = new Date().getTime();
 
                 const [dashboardRes, chartRes] = await Promise.all([
-                    fetch(`https://titan-strength.me/api/v1/dashboards/owner?t=${timestamp}`, {
+                    fetch(`https://titan-strength.onrender.com/api/v1/dashboards/owner?t=${timestamp}`, {
                         headers: { Authorization: `Bearer ${token}` }
                     }),
-                    fetch(`https://titan-strength.me/api/v1/owner/revenue-chart?months=${monthsRange}&t=${timestamp}`, {
+                    fetch(`https://titan-strength.onrender.com/api/v1/owner/revenue-chart?months=${monthsRange}&t=${timestamp}`, {
                         headers: { Authorization: `Bearer ${token}` }
                     })
                 ]);

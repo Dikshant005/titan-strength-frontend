@@ -16,7 +16,7 @@ const Plans = ({ plans, user }) => {
         setProcessingId(planId);
 
         try {
-            const orderRes = await fetch('https://titan-strength.me/api/v1/payments/razorpay/order', {
+            const orderRes = await fetch('https://titan-strength.onrender.com/api/v1/payments/razorpay/order', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ const Plans = ({ plans, user }) => {
                 },
                 handler: async function (response) {
                     try {
-                        const verifyRes = await fetch('https://titan-strength.me/api/v1/payments/razorpay/verify', {
+                        const verifyRes = await fetch('https://titan-strength.onrender.com/api/v1/payments/razorpay/verify', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',

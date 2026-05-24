@@ -12,7 +12,7 @@ const TrainerSchedule = () => {
 
     const fetchSchedule = async () => {
         try {
-            const res = await fetch('https://titan-strength.me/api/v1/trainers/schedule', {
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/trainers/schedule', {
                 headers: { Authorization: `Bearer ${getToken()}` }
             });
             const result = await res.json();
@@ -31,7 +31,7 @@ const TrainerSchedule = () => {
         setModalOpen(true);
         setAttendees([]);
         try {
-            const res = await fetch(`https://titan-strength.me/api/v1/trainers/schedule/${cls._id}/attendees`, {
+            const res = await fetch(`https://titan-strength.onrender.com/api/v1/trainers/schedule/${cls._id}/attendees`, {
                 headers: { Authorization: `Bearer ${getToken()}` }
             });
             const result = await res.json();

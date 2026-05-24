@@ -12,7 +12,7 @@ const MemberMyPlan = () => {
             try {
                 setLoading(true);
 
-                const statusRes = await fetch('https://titan-strength.me/api/v1/members/subscription', {
+                const statusRes = await fetch('https://titan-strength.onrender.com/api/v1/members/subscription', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 const statusData = await statusRes.json();
@@ -21,7 +21,7 @@ const MemberMyPlan = () => {
                     setCurrentSubscription(statusData.data);
                 }
 
-                const historyRes = await fetch('https://titan-strength.me/api/v1/subscriptions/me', {
+                const historyRes = await fetch('https://titan-strength.onrender.com/api/v1/subscriptions/me', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 const historyData = await historyRes.json();

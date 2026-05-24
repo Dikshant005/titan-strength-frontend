@@ -31,7 +31,7 @@ const OwnerPlans = () => {
         try {
             setLoading(true);
             const timestamp = new Date().getTime();
-            const response = await fetch(`https://titan-strength.me/api/v1/plans?t=${timestamp}`, {
+            const response = await fetch(`https://titan-strength.onrender.com/api/v1/plans?t=${timestamp}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await response.json();
@@ -45,7 +45,7 @@ const OwnerPlans = () => {
 
     const fetchPlanDetails = async (id) => {
         try {
-            const response = await fetch(`https://titan-strength.me/api/v1/plans/${id}`, {
+            const response = await fetch(`https://titan-strength.onrender.com/api/v1/plans/${id}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await response.json();
@@ -96,8 +96,8 @@ const OwnerPlans = () => {
         e.preventDefault();
         try {
             const url = isEditMode
-                ? `https://titan-strength.me/api/v1/plans/${currentId}`
-                : `https://titan-strength.me/api/v1/plans`;
+                ? `https://titan-strength.onrender.com/api/v1/plans/${currentId}`
+                : `https://titan-strength.onrender.com/api/v1/plans`;
             const method = isEditMode ? 'PUT' : 'POST';
 
             const bodyData = { ...formData, price: Number(formData.price), durationDays: Number(formData.durationDays) };
@@ -130,7 +130,7 @@ const OwnerPlans = () => {
     const confirmDelete = async () => {
         if (!itemToDelete) return;
         try {
-            const response = await fetch(`https://titan-strength.me/api/v1/plans/${itemToDelete}`, {
+            const response = await fetch(`https://titan-strength.onrender.com/api/v1/plans/${itemToDelete}`, {
                 method: 'DELETE',
                 headers: { Authorization: `Bearer ${token}` }
             });

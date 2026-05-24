@@ -15,7 +15,7 @@ const ManagerMembers = () => {
     const fetchMembers = async () => {
         const token = getAuthToken();
         try {
-            const response = await fetch(`https://titan-strength.me/api/v1/manager/members?status=${filter}`, {
+            const response = await fetch(`https://titan-strength.onrender.com/api/v1/manager/members?status=${filter}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await response.json();
@@ -32,7 +32,7 @@ const ManagerMembers = () => {
     const viewProfile = async (id) => {
         const token = getAuthToken();
         try {
-            const response = await fetch(`https://titan-strength.me/api/v1/manager/members/${id}`, {
+            const response = await fetch(`https://titan-strength.onrender.com/api/v1/manager/members/${id}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await response.json();

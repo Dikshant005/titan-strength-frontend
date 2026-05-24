@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useMemo } from 'react';
 import './trainerContent.css';
 
 const TrainerContent = () => {
-    const API_URL = 'https://titan-strength.me/api/v1/content/videos';
+    const API_URL = 'https://titan-strength.onrender.com/api/v1/content/videos';
     const getToken = () => JSON.parse(localStorage.getItem('titanUser'))?.token;
 
     const [videos, setVideos] = useState([]);

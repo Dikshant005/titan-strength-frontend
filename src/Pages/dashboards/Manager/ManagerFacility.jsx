@@ -28,7 +28,7 @@ const ManagerFacility = () => {
         const token = getAuthToken();
         try {
             setLoading(true);
-            let url = 'https://titan-strength.me/api/v1/manager/equipment';
+            let url = 'https://titan-strength.onrender.com/api/v1/manager/equipment';
             if (filterStatus) url += `?status=${filterStatus}`;
 
             const res = await fetch(url, { headers: { Authorization: `Bearer ${token}` } });
@@ -44,7 +44,7 @@ const ManagerFacility = () => {
     const fetchMaintenance = async () => {
         const token = getAuthToken();
         try {
-            const res = await fetch('https://titan-strength.me/api/v1/manager/equipment?status=maintenance', {
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/manager/equipment?status=maintenance', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await res.json();
@@ -70,7 +70,7 @@ const ManagerFacility = () => {
         e.preventDefault();
         const token = getAuthToken();
         try {
-            const res = await fetch('https://titan-strength.me/api/v1/manager/equipment', {
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/manager/equipment', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
                 body: JSON.stringify(equipForm)
@@ -97,7 +97,7 @@ const ManagerFacility = () => {
         if (!deleteId) return;
         const token = getAuthToken();
         try {
-            const res = await fetch(`https://titan-strength.me/api/v1/manager/equipment/${deleteId}`, {
+            const res = await fetch(`https://titan-strength.onrender.com/api/v1/manager/equipment/${deleteId}`, {
                 method: 'DELETE',
                 headers: { Authorization: `Bearer ${token}` }
             });
@@ -126,7 +126,7 @@ const ManagerFacility = () => {
         e.preventDefault();
         const token = getAuthToken();
         try {
-            const res = await fetch(`https://titan-strength.me/api/v1/manager/equipment/${editId}`, {
+            const res = await fetch(`https://titan-strength.onrender.com/api/v1/manager/equipment/${editId}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
                 body: JSON.stringify(editForm)
@@ -148,7 +148,7 @@ const ManagerFacility = () => {
         e.preventDefault();
         const token = getAuthToken();
         try {
-            const res = await fetch('https://titan-strength.me/api/v1/manager/maintenance/report', {
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/manager/maintenance/report', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
                 body: JSON.stringify(maintForm)
@@ -169,7 +169,7 @@ const ManagerFacility = () => {
     const handleUpdateMaintenanceStatus = async (id, newStatus) => {
         const token = getAuthToken();
         try {
-            const res = await fetch(`https://titan-strength.me/api/v1/manager/maintenance/${id}/status`, {
+            const res = await fetch(`https://titan-strength.onrender.com/api/v1/manager/maintenance/${id}/status`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
                 body: JSON.stringify({ status: newStatus })

@@ -24,7 +24,7 @@ const Login = () => {
         setIsLoading(true);
 
         try {
-            const response = await fetch('https://titan-strength.me/api/v1/auth/login', {
+            const response = await fetch('https://titan-strength.onrender.com/api/v1/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

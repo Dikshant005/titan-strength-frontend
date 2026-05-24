@@ -13,7 +13,7 @@ const MemberActivity = () => {
         if (!token) return;
 
         try {
-            const res = await fetch('https://titan-strength.me/api/v1/members/attendance', {
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/members/attendance', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await res.json();
@@ -35,7 +35,7 @@ const MemberActivity = () => {
 
         setCheckInLoading(true);
         try {
-            const res = await fetch('https://titan-strength.me/api/v1/attendance/check-in', {
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/attendance/check-in', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

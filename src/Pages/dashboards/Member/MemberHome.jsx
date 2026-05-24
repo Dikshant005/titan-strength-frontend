@@ -26,10 +26,10 @@ const MemberHome = () => {
                 const headers = { Authorization: `Bearer ${token}` };
 
                 const [meRes, dashboardRes, statsRes, dietRes] = await Promise.all([
-                    fetch('https://titan-strength.me/api/v1/members/me', { headers }),
-                    fetch('https://titan-strength.me/api/v1/dashboards/member', { headers }),
-                    fetch('https://titan-strength.me/api/v1/members/stats', { headers }),
-                    fetch('https://titan-strength.me/api/v1/content/diets/my-plan', { headers })
+                    fetch('https://titan-strength.onrender.com/api/v1/members/me', { headers }),
+                    fetch('https://titan-strength.onrender.com/api/v1/dashboards/member', { headers }),
+                    fetch('https://titan-strength.onrender.com/api/v1/members/stats', { headers }),
+                    fetch('https://titan-strength.onrender.com/api/v1/content/diets/my-plan', { headers })
                 ]);
 
                 const [meData, dashboardData, statsData, dietData] = await Promise.all([
@@ -69,7 +69,7 @@ const MemberHome = () => {
         e.preventDefault();
         const token = getAuthToken();
         try {
-            const res = await fetch('https://titan-strength.me/api/v1/members/profile', {
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/members/profile', {
                 method: 'PUT',
                 headers: { 
                     'Content-Type': 'application/json', 

@@ -19,8 +19,8 @@ const TrainerOverview = () => {
                 const headers = { Authorization: `Bearer ${token}` };
 
                 const [statsRes, scheduleRes] = await Promise.all([
-                    fetch('https://titan-strength.me/api/v1/trainers/dashboard', { headers }),
-                    fetch('https://titan-strength.me/api/v1/dashboards/trainer', { headers })
+                    fetch('https://titan-strength.onrender.com/api/v1/trainers/dashboard', { headers }),
+                    fetch('https://titan-strength.onrender.com/api/v1/dashboards/trainer', { headers })
                 ]);
 
                 const statsData = await statsRes.json();

@@ -14,7 +14,7 @@ const MemberClasses = () => {
         const token = getToken();
         if (!token) return;
         try {
-            const res = await fetch('https://titan-strength.me/api/v1/members/my-bookings', {
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/members/my-bookings', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await res.json();
@@ -40,7 +40,7 @@ const MemberClasses = () => {
         setShowModal(false);
 
         try {
-            const res = await fetch(`https://titan-strength.me/api/v1/classes/${bookingToCancel}/cancel`, {
+            const res = await fetch(`https://titan-strength.onrender.com/api/v1/classes/${bookingToCancel}/cancel`, {
                 method: 'DELETE',
                 headers: { Authorization: `Bearer ${getToken()}` }
             });

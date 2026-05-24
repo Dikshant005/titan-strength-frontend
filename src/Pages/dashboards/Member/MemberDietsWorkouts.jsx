@@ -16,8 +16,8 @@ const MemberDietsWorkouts = () => {
                 const headers = { Authorization: `Bearer ${token}` };
 
                 const [dietRes, workoutRes] = await Promise.all([
-                    fetch('https://titan-strength.me/api/v1/content/diets/my-plan', { headers }),
-                    fetch('https://titan-strength.me/api/v1/content/workouts/my-plan', { headers })
+                    fetch('https://titan-strength.onrender.com/api/v1/content/diets/my-plan', { headers }),
+                    fetch('https://titan-strength.onrender.com/api/v1/content/workouts/my-plan', { headers })
                 ]);
 
                 const dietData = await dietRes.json();

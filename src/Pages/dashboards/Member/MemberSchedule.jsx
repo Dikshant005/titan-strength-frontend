@@ -10,7 +10,7 @@ const MemberSchedule = () => {
 
     const fetchSchedule = async () => {
         try {
-            const res = await fetch('https://titan-strength.me/api/v1/classes/schedule');
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/classes/schedule');
             const data = await res.json();
             if (data.success) setClasses(data.data);
         } catch (err) {
@@ -28,7 +28,7 @@ const MemberSchedule = () => {
 
         setBookingId(classId);
         try {
-            const res = await fetch(`https://titan-strength.me/api/v1/classes/${classId}/book`, {
+            const res = await fetch(`https://titan-strength.onrender.com/api/v1/classes/${classId}/book`, {
                 method: 'POST',
                 headers: { Authorization: `Bearer ${token}` }
             });

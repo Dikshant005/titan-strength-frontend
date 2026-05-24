@@ -15,7 +15,7 @@ const ManagerOverview = () => {
             const token = getAuthToken();
             try {
                 setLoading(true);
-                const response = await fetch('https://titan-strength.me/api/v1/dashboards/manager', {
+                const response = await fetch('https://titan-strength.onrender.com/api/v1/dashboards/manager', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 const resData = await response.json();

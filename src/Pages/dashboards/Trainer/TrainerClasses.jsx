@@ -16,7 +16,7 @@ const TrainerClasses = () => {
 
     const fetchSchedule = async () => {
         try {
-            const res = await fetch('https://titan-strength.me/api/v1/classes/schedule');
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/classes/schedule');
             const data = await res.json();
             if (data.success) setSchedule(data.data);
         } catch (err) {
@@ -29,7 +29,7 @@ const TrainerClasses = () => {
     const fetchAttendance = async (classId) => {
         const token = getToken();
         try {
-            const res = await fetch(`https://titan-strength.me/api/v1/classes/attendance/${classId}`, {
+            const res = await fetch(`https://titan-strength.onrender.com/api/v1/classes/attendance/${classId}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await res.json();
@@ -48,7 +48,7 @@ const TrainerClasses = () => {
         const end = new Date(start.getTime() + formData.duration * 60000);
 
         try {
-            const res = await fetch('https://titan-strength.me/api/v1/classes', {
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/classes', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ const TrainerClasses = () => {
         e.preventDefault();
         const token = getToken();
         try {
-            const res = await fetch(`https://titan-strength.me/api/v1/classes/${selectedClass.classId}`, {
+            const res = await fetch(`https://titan-strength.onrender.com/api/v1/classes/${selectedClass.classId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -100,7 +100,7 @@ const TrainerClasses = () => {
     const markAttendance = async (userId, status) => {
         const token = getToken();
         try {
-            const res = await fetch('https://titan-strength.me/api/v1/classes/attendance/mark', {
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/classes/attendance/mark', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

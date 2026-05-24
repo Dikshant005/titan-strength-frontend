@@ -13,8 +13,8 @@ const MemberContent = () => {
             setLoading(true);
             const token = getToken();
             const endpoint = activeTab === 'videos'
-                ? 'https://titan-strength.me/api/v1/content/videos'
-                : 'https://titan-strength.me/api/v1/content/diets';
+                ? 'https://titan-strength.onrender.com/api/v1/content/videos'
+                : 'https://titan-strength.onrender.com/api/v1/content/diets';
 
             try {
                 const res = await fetch(endpoint, {

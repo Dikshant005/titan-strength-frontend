@@ -18,7 +18,7 @@ const ManagerStaff = () => {
     const fetchTrainers = async () => {
         const token = getAuthToken();
         try {
-            const res = await fetch('https://titan-strength.me/api/v1/manager/trainers', {
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/manager/trainers', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await res.json();
@@ -31,7 +31,7 @@ const ManagerStaff = () => {
     const fetchUsers = async () => {
         const token = getAuthToken();
         try {
-            const res = await fetch('https://titan-strength.me/api/v1/users', {
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/users', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await res.json();
@@ -47,7 +47,7 @@ const ManagerStaff = () => {
     const fetchBranches = async () => {
         const token = getAuthToken();
         try {
-            const res = await fetch('https://titan-strength.me/api/v1/manager/branches', {
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/manager/branches', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             const data = await res.json();
@@ -67,7 +67,7 @@ const ManagerStaff = () => {
         e.preventDefault();
         const token = getAuthToken();
         try {
-            const res = await fetch('https://titan-strength.me/api/v1/manager/trainers', {
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/manager/trainers', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
                 body: JSON.stringify(trainerForm)
@@ -89,7 +89,7 @@ const ManagerStaff = () => {
         e.preventDefault();
         const token = getAuthToken();
         try {
-            const res = await fetch('https://titan-strength.me/api/v1/manager/trainers/assign-client', {
+            const res = await fetch('https://titan-strength.onrender.com/api/v1/manager/trainers/assign-client', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
                 body: JSON.stringify(assignForm)
@@ -110,7 +110,7 @@ const ManagerStaff = () => {
         e.preventDefault();
         const token = getAuthToken();
         try {
-            const res = await fetch(`https://titan-strength.me/api/v1/manager/trainers/${branchAssignForm.trainerId}/assign-branch`, {
+            const res = await fetch(`https://titan-strength.onrender.com/api/v1/manager/trainers/${branchAssignForm.trainerId}/assign-branch`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
                 body: JSON.stringify({ branchId: branchAssignForm.branchId })
